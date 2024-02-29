@@ -22427,6 +22427,8 @@ html:not(.layout-footer-fixed) .content-wrapper {
 .app-brand-logo img,
 .app-brand-logo svg {
   display: block;
+  height: 2.5rem;
+  width: auto;
 }
 
 .app-brand-text {
