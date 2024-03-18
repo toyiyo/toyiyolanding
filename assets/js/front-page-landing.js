@@ -7,6 +7,9 @@
   const sliderPricing = document.getElementById('slider-pricing'),
     swiperLogos = document.getElementById('swiper-clients-logos'),
     swiperReviews = document.getElementById('swiper-reviews');
+    
+    var priceElement = document.querySelector('.monthly-price');
+    var initialPrice = parseFloat(priceElement.textContent);
 
   // Hero
   const mediaQueryXL = '1200';
@@ -27,7 +30,7 @@
   // -----------------------------------
   if (sliderPricing) {
     noUiSlider.create(sliderPricing, {
-      start: [458],
+      start: [1],
       step: 1,
       connect: [true, false],
       behaviour: 'tap-drag',
@@ -35,13 +38,21 @@
       tooltips: [
         {
           to: function (value) {
+            // Get the new number of users from the slider
+            var numberOfUsers = value;
+
+            // Calculate the new price
+            var newPrice = initialPrice * numberOfUsers;
+
+            // Update the text in the span
+            priceElement.textContent = newPrice.toFixed(2);
             return parseFloat(value).toLocaleString('en-EN', { minimumFractionDigits: 0 }) + '+';
           }
         }
       ],
       range: {
-        min: 0,
-        max: 916
+        min: 1,
+        max: 1000
       }
     });
   }
