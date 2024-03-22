@@ -1,715 +1,1818 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+
+<html
+  lang="en"
+  class="light-style layout-navbar-fixed layout-wide"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="assets/"
+  data-template="front-pages">
   <head>
-    <!-- Google tag (gtag.js) -->
-    <script
-      async
-      src="https://www.googletagmanager.com/gtag/js?id=G-XMBGZVHMHD"
-    ></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag() {
-        dataLayer.push(arguments);
-      }
-      gtag("js", new Date());
-
-      gtag("config", "G-XMBGZVHMHD");
-    </script>
-
     <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Toyiyo - simple project tracking</title>
-    <meta content="" name="description" />
-    <meta content="" name="keywords" />
+    <title>Toyiyo - Simple Project Management</title>
 
-    <!-- Favicons -->
-    <link href="assets/img/favicon.ico" rel="icon" />
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <meta name="description" content="" />
 
-    <!-- Google Fonts -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/img/favicon/favicon.ico" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-      rel="stylesheet"
-    />
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&ampdisplay=swap"
+      rel="stylesheet" />
 
-    <!-- Vendor CSS Files -->
-    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/bootstrap/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet" />
-    <link
-      href="assets/vendor/glightbox/css/glightbox.min.css"
-      rel="stylesheet"
-    />
-    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/vendor/fonts/materialdesignicons.css" />
 
-    <!-- Template Main CSS File -->
-    <link href="assets/css/style.css" rel="stylesheet" />
+    <!-- Menu waves for no-customizer fix -->
+    <link rel="stylesheet" href="assets/vendor/libs/node-waves/node-waves.css" />
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="assets/vendor/css/rtl/core.css" class="template-customizer-core-css" />
+    <link rel="stylesheet" href="assets/vendor/css/rtl/theme-default.css" class="template-customizer-theme-css" />
+    <link rel="stylesheet" href="assets/css/demo.css" />
+    <link rel="stylesheet" href="assets/vendor/css/pages/front-page.css" />
+    <!-- Vendors CSS -->
+
+    <link rel="stylesheet" href="assets/vendor/libs/nouislider/nouislider.css" />
+    <link rel="stylesheet" href="assets/vendor/libs/swiper/swiper.css" />
+
+    <!-- Page CSS -->
+
+    <link rel="stylesheet" href="assets/vendor/css/pages/front-page-landing.css" />
+
+    <!-- Helpers -->
+    <script src="assets/vendor/js/helpers.js"></script>
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
+    <script src="assets/vendor/js/template-customizer.js"></script>
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="assets/js/front-config.js"></script>
   </head>
 
   <body>
-    <!-- ======= Header ======= -->
-    <header id="header" class="fixed-top d-flex align-items-center">
-      <div class="container d-flex align-items-center">
-        <div class="logo me-auto">
-          <a href="index.html"
-            ><img
-              src="assets/img/toyiyoLogoTransparent.png"
-              alt=""
-              class="img-fluid"
-          /></a>
-        </div>
+    <script src="assets/vendor/js/dropdown-hover.js"></script>
+    <script src="assets/vendor/js/mega-dropdown.js"></script>
 
-        <nav id="navbar" class="navbar order-last order-lg-0">
-          <ul>
-            <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-            <li><a class="nav-link scrollto" href="#about">About Us</a></li>
-            <li><a class="nav-link scrollto" href="#pricing">Pricing</a></li>
-            <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-            <li><a class="nav-link" href="https://app.toyiyo.com">Login</a></li>
+    <!-- Navbar: Start -->
+    <nav class="layout-navbar container shadow-none py-0">
+      <div class="navbar navbar-expand-lg landing-navbar border-top-0 px-3 px-md-4">
+        <!-- Menu logo wrapper: Start -->
+        <div class="navbar-brand app-brand demo d-flex py-0 py-lg-2 me-4">
+          <!-- Mobile menu toggle: Start-->
+          <button
+            class="navbar-toggler border-0 px-0 me-2"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="tf-icons mdi mdi-menu mdi-24px align-middle"></i>
+          </button>
+          <!-- Mobile menu toggle: End-->
+          <a href="#" class="app-brand-link">
+            <span class="app-brand-logo demo">
+              <span style="color: #666cff">
+                <img src="assets/img/branding/logo.png" alt="Logo" />
+              </span>
+            </span>
+            <span class="app-brand-text demo menu-text fw-bold ms-2 ps-1">Toyiyo</span>
+          </a>
+        </div>
+        <!-- Menu logo wrapper: End -->
+        <!-- Menu wrapper: Start -->
+        <div class="collapse navbar-collapse landing-nav-menu" id="navbarSupportedContent">
+          <button
+            class="navbar-toggler border-0 text-heading position-absolute end-0 top-0 scaleX-n1-rtl"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <i class="tf-icons mdi mdi-close"></i>
+          </button>
+          <ul class="navbar-nav me-auto p-3 p-lg-0">
+            <li class="nav-item">
+              <a class="nav-link fw-medium" aria-current="page" href="#landingHero">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-medium" href="#landingFeatures">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-medium" href="#landingPricing">Pricing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link fw-medium" href="#landingFAQ">FAQ</a>
+            </li>
+            <!-- <li class="nav-item mega-dropdown">
+              <a
+                href="javascript:void(0);"
+                class="nav-link dropdown-toggle navbar-ex-14-mega-dropdown mega-dropdown fw-medium"
+                aria-expanded="false"
+                data-bs-toggle="mega-dropdown"
+                data-trigger="hover">
+                <span data-i18n="Pages">Pages</span>
+              </a>
+              <div class="dropdown-menu p-4">
+                <div class="row gy-4">
+                  <div class="col-12 col-lg">
+                    <div class="h6 d-flex align-items-center mb-2 mb-lg-3">
+                      <div class="avatar avatar-sm flex-shrink-0 me-2">
+                        <span class="avatar-initial rounded bg-label-primary"
+                          ><i class="mdi mdi-view-grid-outline"></i
+                        ></span>
+                      </div>
+                      <span class="ps-1">Other</span>
+                    </div>
+                    <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a class="nav-link mega-dropdown-link d-flex align-items-center" href="pricing-page.html">
+                          <i class="mdi mdi-radiobox-blank mdi-14px me-2"></i>
+                          <span data-i18n="Pricing">Pricing</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link mega-dropdown-link d-flex align-items-center" href="payment-page.html">
+                          <i class="mdi mdi-radiobox-blank mdi-14px me-2"></i>
+                          <span data-i18n="Payment">Payment</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a class="nav-link mega-dropdown-link d-flex align-items-center" href="checkout-page.html">
+                          <i class="mdi mdi-radiobox-blank mdi-14px me-2"></i>
+                          <span data-i18n="Checkout">Checkout</span>
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link mega-dropdown-link d-flex align-items-center"
+                          href="help-center-landing.html">
+                          <i class="mdi mdi-radiobox-blank mdi-14px me-2"></i>
+                          <span data-i18n="Help Center">Help Center</span>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-12 col-lg">
+                    <div class="h6 d-flex align-items-center mb-2 mb-lg-3">
+                      <div class="avatar avatar-sm flex-shrink-0 me-2">
+                        <span class="avatar-initial rounded bg-label-primary"
+                          ><i class="mdi mdi-lock-open-outline"></i
+                        ></span>
+                      </div>
+                      <span class="ps-1">Auth Demo</span>
+                    </div>
+                    <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a
+                          class="nav-link mega-dropdown-link d-flex align-items-center"
+                          href="../vertical-menu-template/auth-login-basic.html"
+                          target="_blank">
+                          <i class="mdi mdi-radiobox-blank mdi-14px me-2"></i>
+                          Login (Basic)
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link mega-dropdown-link d-flex align-items-center"
+                          href="../vertical-menu-template/auth-login-cover.html"
+                          target="_blank">
+                          <i class="mdi mdi-radiobox-blank mdi-14px me-2"></i>
+                          Login (Cover)
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link mega-dropdown-link d-flex align-items-center"
+                          href="../vertical-menu-template/auth-register-basic.html"
+                          target="_blank">
+                          <i class="mdi mdi-radiobox-blank mdi-14px me-2"></i>
+                          Register (Basic)
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link mega-dropdown-link d-flex align-items-center"
+                          href="../vertical-menu-template/auth-register-cover.html"
+                          target="_blank">
+                          <i class="mdi mdi-radiobox-blank mdi-14px me-2"></i>
+                          Register (Cover)
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link mega-dropdown-link d-flex align-items-center"
+                          href="../vertical-menu-template/auth-register-multisteps.html"
+                          target="_blank">
+                          <i class="mdi mdi-radiobox-blank mdi-14px me-2"></i>
+                          Register (Multi-steps)
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link mega-dropdown-link d-flex align-items-center"
+                          href="../vertical-menu-template/auth-forgot-password-basic.html"
+                          target="_blank">
+                          <i class="mdi mdi-radiobox-blank mdi-14px me-2"></i>
+                          Forgot Password (Basic)
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link mega-dropdown-link d-flex align-items-center"
+                          href="../vertical-menu-template/auth-forgot-password-cover.html"
+                          target="_blank">
+                          <i class="mdi mdi-radiobox-blank mdi-14px me-2"></i>
+                          Forgot Password (Cover)
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link mega-dropdown-link d-flex align-items-center"
+                          href="../vertical-menu-template/auth-reset-password-basic.html"
+                          target="_blank">
+                          <i class="mdi mdi-radiobox-blank mdi-14px me-2"></i>
+                          Reset Password (Basic)
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link mega-dropdown-link d-flex align-items-center"
+                          href="../vertical-menu-template/auth-reset-password-cover.html"
+                          target="_blank">
+                          <i class="mdi mdi-radiobox-blank mdi-14px me-2"></i>
+                          Reset Password (Cover)
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-12 col-lg">
+                    <div class="h6 d-flex align-items-center mb-2 mb-lg-3">
+                      <div class="avatar avatar-sm flex-shrink-0 me-2">
+                        <span class="avatar-initial rounded bg-label-primary"
+                          ><i class="mdi mdi-image-outline"></i
+                        ></span>
+                      </div>
+                      <span class="ps-1">Other</span>
+                    </div>
+                    <ul class="nav flex-column">
+                      <li class="nav-item">
+                        <a
+                          class="nav-link mega-dropdown-link d-flex align-items-center"
+                          href="../vertical-menu-template/pages-misc-error.html"
+                          target="_blank">
+                          <i class="mdi mdi-radiobox-blank mdi-14px me-2"></i>
+                          Error
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link mega-dropdown-link d-flex align-items-center"
+                          href="../vertical-menu-template/pages-misc-under-maintenance.html"
+                          target="_blank">
+                          <i class="mdi mdi-radiobox-blank mdi-14px me-2"></i>
+                          Under Maintenance
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link mega-dropdown-link d-flex align-items-center"
+                          href="../vertical-menu-template/pages-misc-comingsoon.html"
+                          target="_blank">
+                          <i class="mdi mdi-radiobox-blank mdi-14px me-2"></i>
+                          Coming Soon
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link mega-dropdown-link d-flex align-items-center"
+                          href="../vertical-menu-template/pages-misc-not-authorized.html"
+                          target="_blank">
+                          <i class="mdi mdi-radiobox-blank mdi-14px me-2"></i>
+                          Not Authorized
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link mega-dropdown-link d-flex align-items-center"
+                          href="../vertical-menu-template/auth-verify-email-basic.html"
+                          target="_blank">
+                          <i class="mdi mdi-radiobox-blank mdi-14px me-2"></i>
+                          Verify Email (Basic)
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link mega-dropdown-link d-flex align-items-center"
+                          href="../vertical-menu-template/auth-verify-email-cover.html"
+                          target="_blank">
+                          <i class="mdi mdi-radiobox-blank mdi-14px me-2"></i>
+                          Verify Email (Cover)
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link mega-dropdown-link d-flex align-items-center"
+                          href="../vertical-menu-template/auth-two-steps-basic.html"
+                          target="_blank">
+                          <i class="mdi mdi-radiobox-blank mdi-14px me-2"></i>
+                          Two Steps (Basic)
+                        </a>
+                      </li>
+                      <li class="nav-item">
+                        <a
+                          class="nav-link mega-dropdown-link d-flex align-items-center"
+                          href="../vertical-menu-template/auth-two-steps-cover.html"
+                          target="_blank">
+                          <i class="mdi mdi-radiobox-blank mdi-14px me-2"></i>
+                          Two Steps (Cover)
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-4 d-none d-lg-block">
+                    <div class="bg-body nav-img-col p-2">
+                      <img
+                        src="assets/img/front-pages/misc/nav-item-col-img-light.png"
+                        class="img-fluid scaleX-n1-rtl w-100"
+                        alt="nav item col image"
+                        data-app-light-img="front-pages/misc/nav-item-col-img-light.png"
+                        data-app-dark-img="front-pages/misc/nav-item-col-img-dark.png" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li> -->
+            <!-- <li class="nav-item">
+              <a class="nav-link fw-medium" href="../vertical-menu-template/index.html" target="_blank">Admin</a>
+            </li> -->
           </ul>
-          <i class="bi bi-list mobile-nav-toggle"></i>
-        </nav>
-        <!-- .navbar -->
-
-        <!--<div class="header-social-links d-flex align-items-center">
-        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
-      </div>-->
-      </div>
-    </header>
-    <!-- End Header -->
-
-    <!-- ======= Hero Section ======= -->
-    <section id="hero">
-      <div class="container">
-        <div class="row">
-          <div
-            class="col-lg-6 pt-5 pt-lg-0 order-2 order-lg-1 d-flex flex-column justify-content-center"
-            data-aos="fade-up"
-          >
-            <div>
-              <h1>Toyiyo, your simple project management tool</h1>
-              <h2>
-                Make your day more productive and achieve more with Toyiyo
-              </h2>
-              <a href="#pricing" class="btn-get-started scrollto"
-                >Get Started</a
-              >
-            </div>
-          </div>
-          <div
-            class="col-lg-6 order-1 order-lg-2 hero-img"
-            data-aos="fade-left"
-          >
-            <img
-              src="assets/img/groupSuccessful.jpg"
-              class="img-fluid"
-              alt=""
-            />
-          </div>
         </div>
-      </div>
-    </section>
-    <!-- End Hero -->
+        <div class="landing-menu-overlay d-lg-none"></div>
+        <!-- Menu wrapper: End -->
+        <!-- Toolbar: Start -->
+        <ul class="navbar-nav flex-row align-items-center ms-auto">
+          <!-- Style Switcher -->
 
-    <main id="main">
-      <!-- ======= About Section ======= -->
-      <section id="about" class="about">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-6" data-aos="zoom-in">
-              <img src="assets/img/about.jpg" class="img-fluid" alt="" />
-            </div>
-            <div
-              class="col-lg-6 d-flex flex-column justify-contents-center"
-              data-aos="fade-left"
+          <!-- / Style Switcher-->
+
+          <!-- navbar button: Start -->
+          <li>
+            <a
+              href="https://app.toyiyo.com/Account/Login"
+              class="btn btn-primary px-2 px-sm-4 px-lg-2 px-xl-4"
+              target="_blank"
+              ><span class="tf-icons mdi mdi-account me-md-1"></span
+              ><span class="d-none d-md-block">Login</span></a
             >
-              <div class="content pt-4 pt-lg-0">
-                <h3>about us</h3>
-                <p class="fst-italic">
-                  Toyiyo is an easy-to-use online project management tool for
-                  small businesses, teams, and individuals. It's perfect for
-                  staying on top of the milestones and day-to-day tasks involved
-                  with your work.
-                </p>
-                <ul>
-                  <li>
-                    <i class="bi bi-check-circle"></i> Join with ease, we
-                    support self registration via social auth like google as
-                    well as user name and password.
-                  </li>
-                  <li>
-                    <i class="bi bi-check-circle"></i> Working on multiple
-                    projects? Manage unlimited projects with ease.
-                  </li>
-                  <li>
-                    <i class="bi bi-check-circle"></i> Focus on what matters
-                    with our ability to filter your jobs by status.
-                  </li>
-                  <li>
-                    <i class="bi bi-check-circle"></i> Organize it your way! Our
-                    drag-and-drop interface lets you keep your jobs in the order
-                    that matters to you.
-                  </li>
-                  <li>
-                    <i class="bi bi-check-circle"></i> Stay on top of your work
-                    with our ability to set due dates for your jobs.
-                  </li>
-                </ul>
-                <p>
-                  We are a small team of developers who are passionate about
-                  building great products. We are just getting started and we
-                  are excited to see where this journey takes us.
-                </p>
+          </li>
+          <!-- navbar button: End -->
+        </ul>
+        <!-- Toolbar: End -->
+      </div>
+    </nav>
+    <!-- Navbar: End -->
+
+    <!-- Sections:Start -->
+
+    <div data-bs-spy="scroll" class="scrollspy-example">
+      <!-- Hero: Start -->
+      <section id="landingHero" class="section-py landing-hero position-relative">
+        <img
+          src="assets/img/front-pages/backgrounds/hero-bg-light.png"
+          alt="hero background"
+          class="position-absolute top-0 start-0 w-100 h-100 z-n1"
+          data-speed="1"
+          data-app-light-img="front-pages/backgrounds/hero-bg-light.png"
+          data-app-dark-img="front-pages/backgrounds/hero-bg-dark.png" />
+        <div class="container">
+          <div class="hero-text-box text-center">
+            <h1 class="text-primary hero-title">Unlock your team's potential</h1>
+            <h2 class="h6 mb-4 pb-1 lh-lg">
+              Streamline Projects, Boost Productivity, and Eliminate Chaos<br />With Our Intuitive Project Management Solution!
+            </h2>
+            <a href="#landingPricing" class="btn btn-primary">Start your trial</a>
+          </div>
+          <div class="position-relative hero-animation-img">
+            <a href="https://app.toyiyo.com/Account/RegisterCompanyAdmin" target="_blank">
+              <div class="hero-dashboard-img text-center">
+                <img
+                  src="assets/img/front-pages/landing-page/hero-dashboard-light-toyiyo.png"
+                  alt="hero dashboard"
+                  class="animation-img"
+                  data-speed="2"
+                  data-app-light-img="front-pages/landing-page/hero-dashboard-light-toyiyo.png"
+                  data-app-dark-img="front-pages/landing-page/hero-dashboard-dark.png" />
               </div>
+              <div class="position-absolute hero-elements-img">
+                <img
+                  src="assets/img/front-pages/landing-page/hero-elements-toyiyo.png"
+                  alt="hero elements"
+                  class="animation-img"
+                  data-speed="4"
+                  data-app-light-img="front-pages/landing-page/hero-elements-toyiyo.png"
+                  data-app-dark-img="front-pages/landing-page/hero-elements-dark.png" />
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <!-- Hero: End -->
+
+      <!-- Useful features: Start -->
+      <section id="landingFeatures" class="section-py landing-features">
+        <div class="container">
+          <h6 class="text-center fw-semibold d-flex justify-content-center align-items-center mb-4">
+            <img
+              src="assets/img/front-pages/icons/section-tilte-icon.png"
+              alt="section title icon"
+              class="me-2" />
+            <span class="text-uppercase">We understand your pain</span>
+          </h6>
+          <h3 class="text-center mb-2"><span class="fw-bold">No more juggling</span> spreadsheets, emails, and sticky notes to manage your projects</h3>
+          <p class="text-center fw-medium mb-3 mb-md-5 pb-3">
+            we’ve crafted a project management solution that speaks directly to your needs.
+          </p>
+          <div class="features-icon-wrapper row gx-0 gy-4 g-sm-5">
+            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+              <div class="features-icon mb-3">
+                <img src="assets/img/front-pages/icons/laptop-charging.png" alt="laptop charging" />
+              </div>
+              <h5 class="mb-2">Manage long tasks</h5>
+              <p class="features-icon-description">
+                Break larger tasks into manageable pieces and track their progress with Parent and Sub tasks.
+              </p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+              <div class="features-icon mb-3">
+                <img src="assets/img/front-pages/icons/transition-up.png" alt="transition up" />
+              </div>
+              <h5 class="mb-2">Stay on track</h5>
+              <p class="features-icon-description">
+                Keep you informed about project progress, milestones, and upcoming tasks. You’ll never wonder, “What’s next?” again
+              </p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+              <div class="features-icon mb-3">
+                <img src="assets/img/front-pages/icons/edit.png" alt="edit" />
+              </div>
+              <h5 class="mb-2">Visualize Success</h5>
+              <p class="features-icon-description">
+                We help you see the big picture. Whether you’re a project manager, team lead, or individual contributor, toyiyo provides clarity and direction via our charts
+              </p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+              <div class="features-icon mb-3">
+                <img src="assets/img/front-pages/icons/3d-select-solid.png" alt="3d select solid" />
+              </div>
+              <h5 class="mb-2">API Ready</h5>
+              <p class="features-icon-description">
+                Just change the endpoint and see your own data loaded within seconds.
+              </p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+              <div class="features-icon mb-3">
+                <img src="assets/img/front-pages/icons/lifebelt.png" alt="lifebelt" />
+              </div>
+              <h5 class="mb-2">Zero learning curve</h5>
+              <p class="features-icon-description">Time is precious. Toyiyo respects that. You won’t spend hours deciphering cryptic icons or convoluted workflows.</p>
+            </div>
+            <div class="col-lg-4 col-sm-6 text-center features-icon-box">
+              <div class="features-icon mb-3">
+                <img src="assets/img/front-pages/icons/google-docs.png" alt="google docs" />
+              </div>
+              <h5 class="mb-2">One Price, No Surprises</h5>
+              <p class="features-icon-description">Forget complex pricing grids. No hidden fees, no tiers. Just a pocket-friendly subscription that unlocks unlimited possibilities.</p>
             </div>
           </div>
         </div>
       </section>
-      <!-- End About Section -->
+      <!-- Useful features: End -->
 
-      <!-- ======= Features Section ======= -->
-      <section id="features" class="features">
+      <!-- Real customers reviews: Start -->
+      <!-- <section id="landingReviews" class="section-py bg-body landing-reviews pb-0">
         <div class="container">
-          <div class="row">
-            <div class="col-lg-6 mt-2 mb-tg-0 order-2 order-lg-1">
-              <ul class="nav nav-tabs flex-column">
-                <li class="nav-item" data-aos="fade-up">
-                  <a
-                    class="nav-link active show"
-                    data-bs-toggle="tab"
-                    href="#tab-1"
-                  >
-                    <h4>Organize</h4>
+          <h6 class="text-center fw-semibold d-flex justify-content-center align-items-center mb-4">
+            <img
+              src="assets/img/front-pages/icons/section-tilte-icon.png"
+              alt="section title icon"
+              class="me-2" />
+            <span class="text-uppercase">real customers reviews</span>
+          </h6>
+          <h3 class="text-center mb-2"><span class="fw-bold">Success stories</span> from clients</h3>
+          <p class="text-center fw-medium mb-3 mb-md-5">See what our customers have to say about their experience.</p>
+        </div>
+        <div class="swiper-reviews-carousel overflow-hidden mb-5 pt-4">
+          <div class="swiper" id="swiper-reviews">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="card h-100">
+                  <div class="card-body text-body d-flex flex-column justify-content-between text-center">
+                    <div class="mb-3">
+                      <img
+                        src="assets/img/front-pages/branding/logo-4.png"
+                        alt="client logo"
+                        class="client-logo img-fluid" />
+                    </div>
                     <p>
-                      Achieve organizational nirvana with our drag and drop
-                      feature
+                      “I've never used a theme as versatile and flexible as Vuexy. It's my go to for building dashboard
+                      sites on almost any project.”
                     </p>
-                  </a>
-                </li>
-                <li
-                  class="nav-item mt-2"
-                  data-aos="fade-up"
-                  data-aos-delay="100"
-                >
-                  <a class="nav-link" data-bs-toggle="tab" href="#tab-2">
-                    <h4>Focus</h4>
+                    <div class="text-warning mb-3">
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-1">Eugenia Moore</h6>
+                      <p class="mb-0">Founder of Hubspot</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card h-100">
+                  <div class="card-body text-body d-flex flex-column justify-content-between text-center">
+                    <div class="mb-3">
+                      <img
+                        src="assets/img/front-pages/branding/logo-1.png"
+                        alt="client logo"
+                        class="client-logo img-fluid" />
+                    </div>
+                    <p>Materio is awesome, and I particularly enjoy knowing that if I get stuck on something.</p>
+                    <div class="text-warning mb-3">
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-1">Tommy haffman</h6>
+                      <p class="mb-0">Founder of Levis</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card h-100">
+                  <div class="card-body text-body d-flex flex-column justify-content-between text-center">
+                    <div class="mb-3">
+                      <img
+                        src="assets/img/front-pages/branding/logo-3.png"
+                        alt="client logo"
+                        class="client-logo img-fluid" />
+                    </div>
                     <p>
-                      Visualize what matter and self impose work in progress
-                      limits using our focus by status feature.
+                      This template is superior in so many ways. The code, the design, the regular updates, the
+                      support.. It’s the whole package. Excellent Work.
                     </p>
-                  </a>
-                </li>
-                <li
-                  class="nav-item mt-2"
-                  data-aos="fade-up"
-                  data-aos-delay="200"
-                >
-                  <a class="nav-link" data-bs-toggle="tab" href="#tab-3">
-                    <h4>Easy signup</h4>
+                    <div class="text-warning mb-3">
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-1">Eugenia Moore</h6>
+                      <p class="mb-0">CTO of Airbnb</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card h-100">
+                  <div class="card-body text-body d-flex flex-column justify-content-between text-center">
+                    <div class="mb-3">
+                      <img
+                        src="assets/img/front-pages/branding/logo-2.png"
+                        alt="client logo"
+                        class="client-logo img-fluid" />
+                    </div>
                     <p>
-                      From true and tried username and password, to social
-                      logins, authenticate they way you want.
+                      All the requirements for developers have been taken into consideration, so I’m able to build any
+                      interface I want.
                     </p>
-                  </a>
-                </li>
-                <li
-                  class="nav-item mt-2"
-                  data-aos="fade-up"
-                  data-aos-delay="300"
-                >
-                  <a class="nav-link" data-bs-toggle="tab" href="#tab-4">
-                    <h4>Stay on track</h4>
+                    <div class="text-warning mb-3">
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-1">Sara Smith</h6>
+                      <p class="mb-0">Founder of Continental</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card h-100">
+                  <div class="card-body text-body d-flex flex-column justify-content-between text-center">
+                    <div class="mb-3">
+                      <img
+                        src="assets/img/front-pages/branding/logo-5.png"
+                        alt="client logo"
+                        class="client-logo img-fluid" />
+                    </div>
                     <p>
-                      Never miss a deadline with our ability to set due dates
+                      “I've never used a theme as versatile and flexible as Vuexy. It's my go to for building dashboard
+                      sites on almost any project.”
                     </p>
-                  </a>
-                </li>
-              </ul>
+                    <div class="text-warning mb-3">
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-1">Eugenia Moore</h6>
+                      <p class="mb-0">Founder of Hubspot</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card h-100">
+                  <div class="card-body text-body d-flex flex-column justify-content-between text-center h-100">
+                    <div class="mb-3">
+                      <img
+                        src="assets/img/front-pages/branding/logo-4.png"
+                        alt="client logo"
+                        class="client-logo img-fluid" />
+                    </div>
+                    <p>
+                      “I've never used a theme as versatile and flexible as Vuexy. It's my go to for building dashboard
+                      sites on almost any project.”
+                    </p>
+                    <div class="text-warning mb-3">
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star-outline mdi-24px"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-1">Eugenia Moore</h6>
+                      <p class="mb-0">Founder of Hubspot</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card h-100">
+                  <div class="card-body text-body d-flex flex-column justify-content-between text-center h-100">
+                    <div class="mb-3">
+                      <img
+                        src="assets/img/front-pages/branding/logo-1.png"
+                        alt="client logo"
+                        class="client-logo img-fluid" />
+                    </div>
+                    <p>Materio is awesome, and I particularly enjoy knowing that if I get stuck on something.</p>
+                    <div class="text-warning mb-3">
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-1">Tommy haffman</h6>
+                      <p class="mb-0">Founder of Levis</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card h-100">
+                  <div class="card-body text-body d-flex flex-column justify-content-between text-center h-100">
+                    <div class="mb-3">
+                      <img
+                        src="assets/img/front-pages/branding/logo-3.png"
+                        alt="client logo"
+                        class="client-logo img-fluid" />
+                    </div>
+                    <p>
+                      This template is superior in so many ways. The code, the design, the regular updates, the
+                      support.. It’s the whole package. Excellent Work.
+                    </p>
+                    <div class="text-warning mb-3">
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-1">Eugenia Moore</h6>
+                      <p class="mb-0">CTO of Airbnb</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card h-100">
+                  <div class="card-body text-body d-flex flex-column justify-content-between text-center h-100">
+                    <div class="mb-3">
+                      <img
+                        src="assets/img/front-pages/branding/logo-2.png"
+                        alt="client logo"
+                        class="client-logo img-fluid" />
+                    </div>
+                    <p>
+                      All the requirements for developers have been taken into consideration, so I’m able to build any
+                      interface I want.
+                    </p>
+                    <div class="text-warning mb-3">
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star-outline mdi-24px"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-1">Sara Smith</h6>
+                      <p class="mb-0">Founder of Continental</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card h-100">
+                  <div class="card-body text-body d-flex flex-column justify-content-between text-center h-100">
+                    <div class="mb-3">
+                      <img
+                        src="assets/img/front-pages/branding/logo-5.png"
+                        alt="client logo"
+                        class="client-logo img-fluid" />
+                    </div>
+                    <p>
+                      “I've never used a theme as versatile and flexible as Vuexy. It's my go to for building dashboard
+                      sites on almost any project.”
+                    </p>
+                    <div class="text-warning mb-3">
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-1">Eugenia Moore</h6>
+                      <p class="mb-0">Founder of Hubspot</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card h-100">
+                  <div class="card-body text-body d-flex flex-column justify-content-between text-center">
+                    <div class="mb-3">
+                      <img
+                        src="assets/img/front-pages/branding/logo-4.png"
+                        alt="client logo"
+                        class="client-logo img-fluid" />
+                    </div>
+                    <p>
+                      “I've never used a theme as versatile and flexible as Vuexy. It's my go to for building dashboard
+                      sites on almost any project.”
+                    </p>
+                    <div class="text-warning mb-3">
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-1">Eugenia Moore</h6>
+                      <p class="mb-0">Founder of Hubspot</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card h-100">
+                  <div class="card-body text-body d-flex flex-column justify-content-between text-center">
+                    <div class="mb-3">
+                      <img
+                        src="assets/img/front-pages/branding/logo-1.png"
+                        alt="client logo"
+                        class="client-logo img-fluid" />
+                    </div>
+                    <p>Materio is awesome, and I particularly enjoy knowing that if I get stuck on something.</p>
+                    <div class="text-warning mb-3">
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-1">Tommy haffman</h6>
+                      <p class="mb-0">Founder of Levis</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card h-100">
+                  <div class="card-body text-body d-flex flex-column justify-content-between text-center">
+                    <div class="mb-3">
+                      <img
+                        src="assets/img/front-pages/branding/logo-3.png"
+                        alt="client logo"
+                        class="client-logo img-fluid" />
+                    </div>
+                    <p>
+                      This template is superior in so many ways. The code, the design, the regular updates, the
+                      support.. It’s the whole package. Excellent Work.
+                    </p>
+                    <div class="text-warning mb-3">
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-1">Eugenia Moore</h6>
+                      <p class="mb-0">CTO of Airbnb</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card h-100">
+                  <div class="card-body text-body d-flex flex-column justify-content-between text-center">
+                    <div class="mb-3">
+                      <img
+                        src="assets/img/front-pages/branding/logo-2.png"
+                        alt="client logo"
+                        class="client-logo img-fluid" />
+                    </div>
+                    <p>
+                      All the requirements for developers have been taken into consideration, so I’m able to build any
+                      interface I want.
+                    </p>
+                    <div class="text-warning mb-3">
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-1">Sara Smith</h6>
+                      <p class="mb-0">Founder of Continental</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="card h-100">
+                  <div class="card-body text-body d-flex flex-column justify-content-between text-center">
+                    <div class="mb-3">
+                      <img
+                        src="assets/img/front-pages/branding/logo-5.png"
+                        alt="client logo"
+                        class="client-logo img-fluid" />
+                    </div>
+                    <p>
+                      “I've never used a theme as versatile and flexible as Vuexy. It's my go to for building dashboard
+                      sites on almost any project.”
+                    </p>
+                    <div class="text-warning mb-3">
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                      <i class="tf-icons mdi mdi-star mdi-24px"></i>
+                    </div>
+                    <div>
+                      <h6 class="mb-1">Eugenia Moore</h6>
+                      <p class="mb-0">Founder of Hubspot</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="col-lg-6 order-1 order-lg-2" data-aos="zoom-in">
-              <div class="tab-content">
-                <div class="tab-pane active show" id="tab-1">
-                  <figure>
-                    <img
-                      src="assets/img/organized.png"
-                      alt=""
-                      class="img-fluid"
-                    />
-                  </figure>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <hr class="m-0" />
+        <div class="container">
+          <div class="swiper-logo-carousel py-4 my-lg-2">
+            <div class="swiper" id="swiper-clients-logos">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img
+                    src="assets/img/front-pages/branding/logo-1-light.png"
+                    alt="client logo"
+                    class="client-logo"
+                    data-app-light-img="front-pages/branding/logo-1-light.png"
+                    data-app-dark-img="front-pages/branding/logo-1-dark.png" />
                 </div>
-                <div class="tab-pane" id="tab-2">
-                  <figure>
-                    <img src="assets/img/focus.png" alt="" class="img-fluid" />
-                  </figure>
+                <div class="swiper-slide">
+                  <img
+                    src="assets/img/front-pages/branding/logo-2-light.png"
+                    alt="client logo"
+                    class="client-logo"
+                    data-app-light-img="front-pages/branding/logo-2-light.png"
+                    data-app-dark-img="front-pages/branding/logo-2-dark.png" />
                 </div>
-                <div class="tab-pane" id="tab-3">
-                  <figure>
-                    <img src="assets/img/signup.png" alt="" class="img-fluid" />
-                  </figure>
+                <div class="swiper-slide">
+                  <img
+                    src="assets/img/front-pages/branding/logo-3-light.png"
+                    alt="client logo"
+                    class="client-logo"
+                    data-app-light-img="front-pages/branding/logo-3-light.png"
+                    data-app-dark-img="front-pages/branding/logo-3-dark.png" />
                 </div>
-                <div class="tab-pane" id="tab-4">
-                  <figure>
-                    <img src="assets/img/track.png" alt="" class="img-fluid" />
-                  </figure>
+                <div class="swiper-slide">
+                  <img
+                    src="assets/img/front-pages/branding/logo-4-light.png"
+                    alt="client logo"
+                    class="client-logo"
+                    data-app-light-img="front-pages/branding/logo-4-light.png"
+                    data-app-dark-img="front-pages/branding/logo-4-dark.png" />
+                </div>
+                <div class="swiper-slide">
+                  <img
+                    src="assets/img/front-pages/branding/logo-5-light.png"
+                    alt="client logo"
+                    class="client-logo"
+                    data-app-light-img="front-pages/branding/logo-5-light.png"
+                    data-app-dark-img="front-pages/branding/logo-5-dark.png" />
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </section>
-      <!-- End Features Section -->
-      <!-- ======= Pricing Section ======= -->
-      <section id="pricing" class="pricing section-bg">
-        <div class="container">
-          <div class="section-title" data-aos="fade-up">
-            <h2>Pricing</h2>
-            <p>
-              Simplified pricing for everyone. No hidden fees, no surprises.
-            </p>
+      </section> -->
+      <!-- Real customers reviews: End -->
+
+      <!-- Our great team: Start -->
+      <!-- <section id="landingTeam" class="section-py landing-team">
+        <div class="container bg-icon-right position-relative">
+          <img
+            src="assets/img/front-pages/icons/bg-right-icon-light.png"
+            alt="section icon"
+            class="position-absolute top-0 end-0"
+            data-speed="1"
+            data-app-light-img="front-pages/icons/bg-right-icon-light.png"
+            data-app-dark-img="front-pages/icons/bg-right-icon-dark.png" />
+          <h6 class="text-center fw-semibold d-flex justify-content-center align-items-center mb-4">
+            <img
+              src="assets/img/front-pages/icons/section-tilte-icon.png"
+              alt="section title icon"
+              class="me-2" />
+            <span class="text-uppercase">our great team</span>
+          </h6>
+          <h3 class="text-center mb-2"><span class="fw-bold">Supported</span> by Real People</h3>
+          <p class="text-center fw-medium mb-3 mb-md-5 pb-3">Who is behind these great-looking interfaces?</p>
+          <div class="row gy-5 mt-2">
+            <div class="col-lg-3 col-sm-6">
+              <div class="card card-hover-border-primary mt-3 mt-lg-0 shadow-none">
+                <div class="bg-label-primary position-relative team-image-box">
+                  <img
+                    src="assets/img/front-pages/landing-page/team-member-1.png"
+                    class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl"
+                    alt="human image" />
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title fw-semibold mb-1">Sophie Gilbert</h5>
+                  <p class="card-text">Project Manager</p>
+                  <div class="text-center team-media-icons">
+                    <a href="javascript:void(0);" class="text-heading" target="_blank">
+                      <i class="tf-icons mdi mdi-facebook mdi-24px me-2"></i>
+                    </a>
+                    <a href="javascript:void(0);" class="text-heading" target="_blank">
+                      <i class="tf-icons mdi mdi-twitter mdi-24px me-2"></i>
+                    </a>
+                    <a href="javascript:void(0);" class="text-heading" target="_blank">
+                      <i class="tf-icons mdi mdi-linkedin mdi-24px"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <div class="card card-hover-border-danger mt-3 mt-lg-0 shadow-none">
+                <div class="bg-label-danger position-relative team-image-box">
+                  <img
+                    src="assets/img/front-pages/landing-page/Jose-no-background.png"
+                    class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl"
+                    alt="human image" />
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title fw-semibold mb-1">Jose Delgado</h5>
+                  <p class="card-text">Founder</p>
+                  <div class="text-center team-media-icons">
+                    <a href="javascript:void(0);" class="text-heading" target="_blank">
+                      <i class="tf-icons mdi mdi-facebook mdi-24px me-2"></i>
+                    </a>
+                    <a href="javascript:void(0);" class="text-heading" target="_blank">
+                      <i class="tf-icons mdi mdi-twitter mdi-24px me-2"></i>
+                    </a>
+                    <a href="javascript:void(0);" class="text-heading" target="_blank">
+                      <i class="tf-icons mdi mdi-linkedin mdi-24px"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <div class="card card-hover-border-success mt-3 mt-lg-0 shadow-none">
+                <div class="bg-label-success position-relative team-image-box">
+                  <img
+                    src="assets/img/front-pages/landing-page/team-member-3.png"
+                    class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl"
+                    alt="human image" />
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title fw-semibold mb-1">Chris Watkins</h5>
+                  <p class="card-text">Marketing Manager</p>
+                  <div class="text-center team-media-icons">
+                    <a href="javascript:void(0);" class="text-heading" target="_blank">
+                      <i class="tf-icons mdi mdi-facebook mdi-24px me-2"></i>
+                    </a>
+                    <a href="javascript:void(0);" class="text-heading" target="_blank">
+                      <i class="tf-icons mdi mdi-twitter mdi-24px me-2"></i>
+                    </a>
+                    <a href="javascript:void(0);" class="text-heading" target="_blank">
+                      <i class="tf-icons mdi mdi-linkedin mdi-24px"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 col-sm-6">
+              <div class="card card-hover-border-info mt-3 mt-lg-0 shadow-none">
+                <div class="bg-label-info position-relative team-image-box">
+                  <img
+                    src="assets/img/front-pages/landing-page/team-member-4.png"
+                    class="position-absolute card-img-position bottom-0 start-50 scaleX-n1-rtl"
+                    alt="human image" />
+                </div>
+                <div class="card-body text-center">
+                  <h5 class="card-title fw-semibold mb-1">Paul Miles</h5>
+                  <p class="card-text">UI Designer</p>
+                  <div class="text-center team-media-icons">
+                    <a href="javascript:void(0);" class="text-heading" target="_blank">
+                      <i class="tf-icons mdi mdi-facebook mdi-24px me-2"></i>
+                    </a>
+                    <a href="javascript:void(0);" class="text-heading" target="_blank">
+                      <i class="tf-icons mdi mdi-twitter mdi-24px me-2"></i>
+                    </a>
+                    <a href="javascript:void(0);" class="text-heading" target="_blank">
+                      <i class="tf-icons mdi mdi-linkedin mdi-24px"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
+        </div>
+      </section> -->
+      <!-- Our great team: End -->
 
-          <ul class="nav nav-tabs" id="myTab" role="tablist">
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="monthly-tab" data-bs-toggle="tab" data-bs-target="#monthly" type="button" role="tab" aria-controls="monthly" aria-selected="true">Monthly</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link" id="yearly-tab" data-bs-toggle="tab" data-bs-target="#yearly" type="button" role="tab" aria-controls="yearly" aria-selected="false">Yearly</button>
-            </li>
-          </ul>
-          <div class="tab-content" id="myTabContent">
-            <div class="tab-pane fade show active" id="monthly" role="tabpanel" aria-labelledby="monthly-tab">
-              <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="box" data-aos="zoom-in">
-                        <h3>Lite</h3>
-                        
-                        <h4><sup>$</sup>3.99<span> User/Month</span></h4>
-    
-                        <p>Perfect for small teams</p>
-                        <ul>
-                            <li>Unlimited Projects</li>
-                            <li>Unlimited Jobs</li>
-                            <li>Unlimited Sub Tasks</li>
-                            <li>Reporting</li>
-                        </ul>
-                        <div class="btn-wrap">
-                            <a href="https://app.toyiyo.com/Account/RegisterCompanyAdmin" class="btn-buy">Subscribe To Lite</a>
-                        </div>
+      <!-- Pricing plans: Start -->
+      <section id="landingPricing" class="section-py bg-body landing-pricing">
+        <div class="container bg-icon-left position-relative">
+          <img
+            src="assets/img/front-pages/icons/bg-left-icon-light.png"
+            alt="section icon"
+            class="position-absolute top-0 start-0"
+            data-speed="1"
+            data-app-light-img="front-pages/icons/bg-left-icon-light.png"
+            data-app-dark-img="front-pages/icons/bg-left-icon-dark.png" />
+          <h6 class="text-center fw-semibold d-flex justify-content-center align-items-center mb-4">
+            <img
+              src="assets/img/front-pages/icons/section-tilte-icon.png"
+              alt="section title icon"
+              class="me-2" />
+            <span class="text-uppercase">pricing plans</span>
+          </h6>
+          <h3 class="text-center mb-2"><span class="fw-bold">One Price</span> No Surprises</h3>
+          <p class="text-center fw-medium mb-5 pt-3 pb-lg-5">
+            Our plan includes all our advanced tools and features to boost your productivity.
+          </p>
+          <div id="slider-pricing" class="mb-5"></div>
+          <div class="row gy-4 pt-lg-3">
+            <!-- Basic Plan: Start -->
+            <!-- <div class="col-xl-4 col-lg-6">
+              <div class="card shadow-none">
+                <div class="card-header border-0">
+                  <h3 class="mb-2 pb-1">Basic Plan</h3>
+                  <div class="d-flex align-items-center">
+                    <h5 class="d-flex mb-0"><sup class="h5 mt-3">$</sup><span class="display-3 fw-bold">20</span></h5>
+                    <div class="ms-2 ps-1">
+                      <h6 class="mb-1">Per month</h6>
+                      <p class="small mb-0">10% off for yearly subscription</p>
                     </div>
+                  </div>
+                  <img src="assets/img/front-pages/icons/smiling-icon.png" alt="smiling icon" />
                 </div>
-              </div>
-            </div>
-            <div class="tab-pane fade" id="yearly" role="tabpanel" aria-labelledby="yearly-tab">
-              <div class="row">
-                <div class="col-lg-12 col-md-12">
-                    <div class="box" data-aos="zoom-in">
-                        <h3>Lite</h3>
-                        
-                        <h4><sup>$</sup>39.99<span> User/Year</span></h4>
-                            
-                        <p>2 months free when you pay yearly</p>
-                        <ul>
-                            <li>Unlimited Projects</li>
-                            <li>Unlimited Jobs</li>
-                            <li>Unlimited Sub Tasks</li>
-                            <li>Reporting</li>
-                        </ul>
-                        <div class="btn-wrap">
-                            <a href="https://app.toyiyo.com/Account/RegisterCompanyAdmin" class="btn-buy">Subscribe To Lite</a>
-                        </div>
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li>
+                      <h5>
+                        <img
+                          src="assets/img/front-pages/icons/list-arrow-icon.png"
+                          alt="list arrow icon"
+                          class="me-2 pe-1 scaleX-n1-rtl" />
+                        Timeline
+                      </h5>
+                    </li>
+                    <li>
+                      <h5>
+                        <img
+                          src="assets/img/front-pages/icons/list-arrow-icon.png"
+                          alt="list arrow icon"
+                          class="me-2 pe-1 scaleX-n1-rtl" />
+                        Basic search
+                      </h5>
+                    </li>
+                    <li>
+                      <h5>
+                        <img
+                          src="assets/img/front-pages/icons/list-arrow-icon.png"
+                          alt="list arrow icon"
+                          class="me-2 pe-1 scaleX-n1-rtl" />
+                        Live chat widget
+                      </h5>
+                    </li>
+                    <li>
+                      <h5>
+                        <img
+                          src="assets/img/front-pages/icons/list-arrow-icon.png"
+                          alt="list arrow icon"
+                          class="me-2 pe-1 scaleX-n1-rtl" />
+                        Email marketing
+                      </h5>
+                    </li>
+                    <li>
+                      <h5>
+                        <img
+                          src="assets/img/front-pages/icons/list-arrow-icon.png"
+                          alt="list arrow icon"
+                          class="me-2 pe-1 scaleX-n1-rtl" />
+                        Custom Forms
+                      </h5>
+                    </li>
+                    <li>
+                      <h5>
+                        <img
+                          src="assets/img/front-pages/icons/list-arrow-icon.png"
+                          alt="list arrow icon"
+                          class="me-2 pe-1 scaleX-n1-rtl" />
+                        Traffic analytics
+                      </h5>
+                    </li>
+                  </ul>
+                  <hr />
+                  <div class="d-flex justify-content-between align-items-center flex-wrap">
+                    <div class="me-1">
+                      <h6 class="mb-1">Basic Support</h6>
+                      <p class="small mb-0">Only Email</p>
                     </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-
-
-            <!-- <div class="col-lg-3 col-md-6 mt-4 mt-md-0">
-              <div class="box" data-aos="zoom-in" data-aos-delay="100">
-                <h3>Builder - coming soon</h3>
-                <h4><sup>$</sup>59<span> / month</span></h4>
-                <ul>
-                  <li>Everything in Free and</li>
-                  <li>Calendar view</li>
-                  <li>Board</li>
-                  <li>Estimates and Forecasts</li>
-                </ul>
-                <div class="btn-wrap">
-                  <a
-                    href="https://toyiyo-lead.zapier.app/contact-us"
-                    class="btn-buy"
-                    >Join our wait list</a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 mt-4 mt-lg-0 na">
-              <div class="box" data-aos="zoom-in" data-aos-delay="200">
-                <h3>Teams - coming soon</h3>
-                <h4><sup>$</sup>399<span> / month</span></h4>
-                <ul>
-                  <li>Roadmap</li>
-                  <li>Insights</li>
-                  <li>granular permissions</li>
-                  <li>Workspaces</li>
-                </ul>
-                <div class="btn-wrap">
-                  <a
-                    href="https://toyiyo-lead.zapier.app/contact-us"
-                    class="btn-buy"
-                    >Join our wait list</a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <div class="col-lg-3 col-md-6 mt-4 mt-lg-0">
-              <div class="box" data-aos="zoom-in" data-aos-delay="300">
-                <span class="advanced">Advanced</span>
-                <h3>Enterprise - coming soon</h3>
-                <h4><sup>$</sup>599<span> / month</span></h4>
-                <ul>
-                  <li>Audit logs, SAML SSO, IP whitelisting</li>
-                  <li>Reporting</li>
-                  <li>API access</li>
-                  <li>Automation with _Zapier</li>
-                </ul>
-                <div class="btn-wrap">
-                  <a
-                    href="https://toyiyo-lead.zapier.app/contact-us"
-                    class="btn-buy"
-                    >Join our wait list</a
-                  >
+                    <span class="badge bg-label-primary rounded-pill">AVG. Time: 24h</span>
+                  </div>
+                  <div class="text-center mt-4 pt-2">
+                    <a href="payment-page.html" class="btn btn-outline-primary w-100">Get Started</a>
+                  </div>
                 </div>
               </div>
             </div> -->
+            <!-- Basic Plan: End -->
+
+            <!-- Starter Plan: Start -->
+            <div class="col-xl-4 col-lg-6 mx-auto"></div>
+              <div class="card border-primary border-2 shadow-none">
+                <div class="card-header border-0">
+                  <h3 class="mb-2 pb-1">Starter Plan</h3>
+                  <div class="d-flex align-items-center">
+                    <h5 class="d-flex mb-0"><sup class="h5 mt-3">$</sup><span class="display-3 fw-bold monthly-price">3.99</span></h5>
+                    <div class="ms-2 ps-1">
+                      <h6 class="mb-1">Per month</h6>
+                      <p class="small mb-0">2 months free for yearly subscription</p>
+                    </div>
+                  </div>
+                  <img src="assets/img/front-pages/icons/smiling-icon.png" alt="smiling icon" />
+                </div>
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li>
+                      <h5>
+                        <img
+                          src="assets/img/front-pages/icons/list-arrow-icon.png"
+                          alt="list arrow icon"
+                          class="me-2 pe-1 scaleX-n1-rtl" />
+                        Unlimited Projects
+                      </h5>
+                    </li>
+                    <li>
+                      <h5>
+                        <img
+                          src="assets/img/front-pages/icons/list-arrow-icon.png"
+                          alt="list arrow icon"
+                          class="me-2 pe-1 scaleX-n1-rtl" />
+                        Unlimited Tasks
+                      </h5>
+                    </li>
+                    <li>
+                      <h5>
+                        <img
+                          src="assets/img/front-pages/icons/list-arrow-icon.png"
+                          alt="list arrow icon"
+                          class="me-2 pe-1 scaleX-n1-rtl" />
+                        Advanced Reporting
+                      </h5>
+                    </li>
+                    <li>
+                      <h5>
+                        <img
+                          src="assets/img/front-pages/icons/list-arrow-icon.png"
+                          alt="list arrow icon"
+                          class="me-2 pe-1 scaleX-n1-rtl" />
+                        API Access
+                      </h5>
+                    </li>
+                  </ul>
+                  <hr />
+                  <div class="d-flex justify-content-between align-items-center flex-wrap">
+                    <div class="me-1">
+                      <h6 class="mb-1">Standard Support</h6>
+                      <p class="small mb-0">Email</p>
+                    </div>
+                    <span class="badge bg-label-primary rounded-pill">AVG. Time: 6h</span>
+                  </div>
+                  <div class="text-center mt-4 pt-2">
+                    <a href="https://app.toyiyo.com/Account/RegisterCompanyAdmin" class="btn btn-primary w-100">Get Started</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Favourite Plan: End -->
+
+            <!-- Standard Plan: Start -->
+            <!-- <div class="col-xl-4 col-lg-6">
+              <div class="card shadow-none">
+                <div class="card-header border-0">
+                  <h3 class="mb-2 pb-1">Standard Plan</h3>
+                  <div class="d-flex align-items-center">
+                    <h5 class="d-flex mb-0"><sup class="h5 mt-3">$</sup><span class="display-3 fw-bold">99</span></h5>
+                    <div class="ms-2 ps-1">
+                      <h6 class="mb-1">Per month</h6>
+                      <p class="small mb-0">10% off for yearly subscription</p>
+                    </div>
+                  </div>
+                  <img src="assets/img/front-pages/icons/smiling-icon.png" alt="smiling icon" />
+                </div>
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li>
+                      <h5>
+                        <img
+                          src="assets/img/front-pages/icons/list-arrow-icon.png"
+                          alt="list arrow icon"
+                          class="me-2 pe-1 scaleX-n1-rtl" />
+                        Everything in premium
+                      </h5>
+                    </li>
+                    <li>
+                      <h5>
+                        <img
+                          src="assets/img/front-pages/icons/list-arrow-icon.png"
+                          alt="list arrow icon"
+                          class="me-2 pe-1 scaleX-n1-rtl" />
+                        Timeline with database
+                      </h5>
+                    </li>
+                    <li>
+                      <h5>
+                        <img
+                          src="assets/img/front-pages/icons/list-arrow-icon.png"
+                          alt="list arrow icon"
+                          class="me-2 pe-1 scaleX-n1-rtl" />
+                        Fuzzy search
+                      </h5>
+                    </li>
+                    <li>
+                      <h5>
+                        <img
+                          src="assets/img/front-pages/icons/list-arrow-icon.png"
+                          alt="list arrow icon"
+                          class="me-2 pe-1 scaleX-n1-rtl" />
+                        A/B testing sanbox
+                      </h5>
+                    </li>
+                    <li>
+                      <h5>
+                        <img
+                          src="assets/img/front-pages/icons/list-arrow-icon.png"
+                          alt="list arrow icon"
+                          class="me-2 pe-1 scaleX-n1-rtl" />
+                        Custom permissions
+                      </h5>
+                    </li>
+                    <li>
+                      <h5>
+                        <img
+                          src="assets/img/front-pages/icons/list-arrow-icon.png"
+                          alt="list arrow icon"
+                          class="me-2 pe-1 scaleX-n1-rtl" />
+                        Social media automation
+                      </h5>
+                    </li>
+                  </ul>
+                  <hr />
+                  <div class="d-flex justify-content-between align-items-center flex-wrap">
+                    <div class="me-1">
+                      <h6 class="mb-1">Exclusive Support</h6>
+                      <p class="small mb-0">Email, Chat & Google Meet</p>
+                    </div>
+                    <span class="badge bg-label-primary rounded-pill">Live Support</span>
+                  </div>
+                  <div class="text-center mt-4 pt-2">
+                    <a href="payment-page.html" class="btn btn-outline-primary w-100">Get Started</a>
+                  </div>
+                </div>
+              </div>
+            </div> -->
+            <!-- Standard Plan: End -->
           </div>
         </div>
       </section>
-      <!-- End Pricing Section -->
+      <!-- Pricing plans: End -->
 
-      <!-- ======= F.A.Q Section ======= 
-    <section id="faq" class="faq">
-      <div class="container">
-
-        <div class="section-title" data-aos="fade-up">
-          <h2>Frequently Asked Questions</h2>
-        </div>
-
-        <ul class="faq-list">
-
-          <li>
-            <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">Non consectetur a erat nam at lectus urna duis? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq1" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Feugiat pretium nibh ipsum consequat. Tempus iaculis urna id volutpat lacus laoreet non curabitur gravida. Venenatis lectus magna fringilla urna porttitor rhoncus dolor purus non.
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">Feugiat scelerisque varius morbi enim nunc faucibus a pellentesque? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq2" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq3" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Eleifend mi in nulla posuere sollicitudin aliquam ultrices sagittis orci. Faucibus pulvinar elementum integer enim. Sem nulla pharetra diam sit amet nisl suscipit. Rutrum tellus pellentesque eu tincidunt. Lectus urna duis convallis convallis tellus. Urna molestie at elementum eu facilisis sed odio morbi quis
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">Ac odio tempor orci dapibus. Aliquam eleifend mi in nulla? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq4" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Dolor sit amet consectetur adipiscing elit pellentesque habitant morbi. Id interdum velit laoreet id donec ultrices. Fringilla phasellus faucibus scelerisque eleifend donec pretium. Est pellentesque elit ullamcorper dignissim. Mauris ultrices eros in cursus turpis massa tincidunt dui.
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">Tempus quam pellentesque nec nam aliquam sem et tortor consequat? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq5" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Molestie a iaculis at erat pellentesque adipiscing commodo. Dignissim suspendisse in est ante in. Nunc vel risus commodo viverra maecenas accumsan. Sit amet nisl suscipit adipiscing bibendum est. Purus gravida quis blandit turpis cursus in
-              </p>
-            </div>
-          </li>
-
-          <li>
-            <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">Tortor vitae purus faucibus ornare. Varius vel pharetra vel turpis nunc eget lorem dolor? <i class="bi bi-chevron-down icon-show"></i><i class="bi bi-chevron-up icon-close"></i></div>
-            <div id="faq6" class="collapse" data-bs-parent=".faq-list">
-              <p>
-                Laoreet sit amet cursus sit amet dictum sit amet justo. Mauris vitae ultricies leo integer malesuada nunc vel. Tincidunt eget nullam non nisi est sit amet. Turpis nunc eget lorem dolor sed. Ut venenatis tellus in metus vulputate eu scelerisque. Pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Nibh tellus molestie nunc non blandit massa enim nec.
-              </p>
-            </div>
-          </li>
-
-        </ul>
-
-      </div>
-    </section> End Frequently Asked Questions Section -->
-
-      <!-- ======= Contact Section ======= -->
-      <section id="contact" class="contact section-bg">
+      <!-- Fun facts: Start -->
+      <section id="landingFunFacts" class="section-py landing-fun-facts">
         <div class="container">
-          <div class="section-title" data-aos="fade-up">
-            <h2>Contact Us</h2>
-          </div>
-
-          <div class="row">
-            <div
-              class="col-lg-12 d-flex align-items-stretch"
-              data-aos="fade-right"
-            >
-              <div class="info">
-                <div class="address">
-                  <i class="bi bi-geo-alt"></i>
-                  <h4>Location:</h4>
-                  <p>San Antonio, TX</p>
-                </div>
-
-                <div class="email">
-                  <i class="bi bi-envelope"></i>
-                  <h4>Email:</h4>
-                  <p>contact@toyiyo.com</p>
-                </div>
-                <!--
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
-              </div> -->
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27802.893690158515!2d-98.51012566049035!3d29.418222905308017!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x865c5f5487c26c25%3A0xaec86cbf16f24a4e!2sDowntown%2C%20San%20Antonio%2C%20TX!5e0!3m2!1sen!2sus!4v1667217652540!5m2!1sen!2sus"
-                  frameborder="0"
-                  style="border: 0; width: 100%; height: 290px"
-                  allowfullscreen=""
-                  loading="lazy"
-                  referrerpolicy="no-referrer-when-downgrade"
-                ></iframe>
-              </div>
+          <div class="row gx-0 gy-5 gx-sm-5">
+            <div class="col-md-3 col-sm-6 text-center">
+              <span class="badge badge-center rounded-pill bg-label-hover-primary fun-facts-icon mb-4"
+                ><i class="tf-icons mdi mdi-land-plots mdi-36px"></i
+              ></span>
+              <h2 class="fw-bold mb-1">1000+</h2>
+              <p class="fw-medium mb-0">Completed Tasks</p>
             </div>
-            <!--
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-left">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
-                </div>
-                <div class="form-group col-md-6 mt-3 mt-md-0">
-                  <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
-              </div>
-              <div class="form-group mt-3">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
+            <div class="col-md-3 col-sm-6 text-center">
+              <span class="badge badge-center rounded-pill bg-label-hover-success fun-facts-icon mb-4"
+                ><i class="tf-icons mdi mdi-clock-outline mdi-36px"></i
+              ></span>
+              <h2 class="fw-bold mb-1">1,000+</h2>
+              <p class="fw-medium mb-0">Development Days</p>
+            </div>
+            <div class="col-md-3 col-sm-6 text-center">
+              <span class="badge badge-center rounded-pill bg-label-hover-warning fun-facts-icon mb-4"
+                ><i class="tf-icons mdi mdi-emoticon-happy-outline mdi-36px"></i
+              ></span>
+              <h2 class="fw-bold mb-1">105,777+</h2>
+              <p class="fw-medium mb-0">Code Changes</p>
+            </div>
+            <div class="col-md-3 col-sm-6 text-center">
+              <span class="badge badge-center rounded-pill bg-label-hover-info fun-facts-icon mb-4"
+                ><i class="tf-icons mdi mdi-medal-outline mdi-36px"></i
+              ></span>
+              <h2 class="fw-bold mb-1">Many+</h2>
+              <p class="fw-medium mb-0">Happy Customers</p>
+            </div>
           </div>
-          --></div>
         </div>
       </section>
-      <!-- End Contact Section -->
-    </main>
-    <!-- End #main -->
+      <!-- Fun facts: End -->
 
-    <!-- ======= Footer ======= -->
-    <footer id="footer">
-      <div class="footer-top">
-        <div class="container">
-          <div class="row">
-            <div class="col-lg-3 col-md-6">
-              <div class="footer-info">
-                <h3>Toyiyo</h3>
-                <p>
-                  San Antonio, TX, USA<br /><br />
-                  <!--<strong>Phone:</strong> +1 5589 55488 55<br>-->
-                  <strong>Email:</strong> contact@toyiyo.com<br />
-                </p>
-                <!--
-              <div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-              </div> -->
+      <!-- FAQ: Start -->
+      <section id="landingFAQ" class="section-py bg-body landing-faq">
+        <div class="container bg-icon-right">
+          <img
+            src="assets/img/front-pages/icons/bg-right-icon-light.png"
+            alt="section icon"
+            class="position-absolute top-0 end-0"
+            data-speed="1"
+            data-app-light-img="front-pages/icons/bg-right-icon-light.png"
+            data-app-dark-img="front-pages/icons/bg-right-icon-dark.png" />
+          <h6 class="text-center fw-semibold d-flex justify-content-center align-items-center mb-4">
+            <img
+              src="assets/img/front-pages/icons/section-tilte-icon.png"
+              alt="section title icon"
+              class="me-2" />
+            <span class="text-uppercase">faq</span>
+          </h6>
+          <h3 class="text-center mb-2">Frequently asked<span class="fw-bold"> questions</span></h3>
+          <p class="text-center fw-medium mb-3 mb-md-5 pb-3">
+            Browse through these FAQs to find answers to commonly asked questions.
+          </p>
+          <div class="row gy-5">
+            <div class="col-lg-5">
+              <div class="text-center">
+                <img
+                  src="assets/img/front-pages/landing-page/sitting-girl-with-laptop.png
+          "
+                  alt="sitting girl with laptop"
+                  class="faq-image" />
               </div>
             </div>
+            <div class="col-lg-7">
+              <div class="accordion" id="accordionFront">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="head-One">
+                    <button
+                      type="button"
+                      class="accordion-button collapsed"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#accordionOne"
+                      aria-expanded="true"
+                      aria-controls="accordionOne">
+                      What is Toyiyo?
+                    </button>
+                  </h2>
 
-            <div class="col-lg-2 col-md-12 footer-links">
-              <h4>Useful Links</h4>
-              <ul>
-                <li>
-                  <i class="bx bx-chevron-right"></i> <a href="#">Home</a>
+                  <div
+                    id="accordionOne"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionFront"
+                    aria-labelledby="accordionOne">
+                    <div class="accordion-body">
+                      Toyiyo is an easy-to-use online project management tool designed for small businesses, teams, and individuals. It helps you stay on top of milestones and day-to-day tasks related to your work. You can manage unlimited projects, filter jobs by status, and set due dates for tasks.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="head-Two">
+                    <button
+                      type="button"
+                      class="accordion-button collapsed"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#accordionTwo"
+                      aria-expanded="false"
+                      aria-controls="accordionTwo">
+                      How do I sign up for Toyiyo??
+                    </button>
+                  </h2>
+                  <div
+                    id="accordionTwo"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="accordionTwo"
+                    data-bs-parent="#accordionFront">
+                    <div class="accordion-body">
+                      Signing up for Toyiyo is a breeze! You can choose from various authentication methods:
+                      <br/>
+                      Username and Password: The traditional way.
+                      <br/>
+                      Social Logins: Authenticate using Google or other social platforms.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item active">
+                  <h2 class="accordion-header" id="head-Three">
+                    <button
+                      type="button"
+                      class="accordion-button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#accordionThree"
+                      aria-expanded="true"
+                      aria-controls="accordionThree">
+                      Can I manage multiple projects with Toyiyo??
+                    </button>
+                  </h2>
+                  <div
+                    id="accordionThree"
+                    class="accordion-collapse collapse show"
+                    aria-labelledby="accordionThree"
+                    data-bs-parent="#accordionFront">
+                    <div class="accordion-body">
+                      Absolutely! Toyiyo allows you to manage unlimited projects with ease.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="head-Four">
+                    <button
+                      type="button"
+                      class="accordion-button collapsed"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#accordionFour"
+                      aria-expanded="false"
+                      aria-controls="accordionFour">
+                      How can I organize my tasks within Toyiyo?
+                    </button>
+                  </h2>
+                  <div
+                    id="accordionFour"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="accordionFour"
+                    data-bs-parent="#accordionFront">
+                    <div class="accordion-body">
+                      Use Toyiyo’s drag-and-drop interface to keep your tasks in the order that matters to you. Organize it your way
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="head-Five">
+                    <button
+                      type="button"
+                      class="accordion-button collapsed"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#accordionFive"
+                      aria-expanded="false"
+                      aria-controls="accordionFive">
+                      What pricing plans does Toyiyo offer?
+                    </button>
+                  </h2>
+                  <div
+                    id="accordionFive"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="accordionFive"
+                    data-bs-parent="#accordionFront">
+                    <div class="accordion-body">
+                      Toyiyo offers simplified pricing with no hidden fees or surprises. You can choose between monthly or yearly subscriptions.
+                      <br/>
+                      The Starter plan costs $3.99 per user per month and includes unlimited projects, jobs, sub-tasks, and reporting
+                      <br/>
+                      The yearly Starter plan costs $39.99 per user and gives you 2 months free compared to the monthly subscription1
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- FAQ: End -->
+
+      <!-- CTA: Start -->
+      <section id="landingCTA" class="section-py border border-2 landing-cta p-lg-0 pb-0 position-relative">
+        <img
+          src="assets/img/front-pages/backgrounds/cta-bg.png"
+          class="position-absolute bottom-0 end-0 scaleX-n1-rtl h-100 w-100 z-n1"
+          alt="cta image" />
+        <div class="container">
+          <div class="row align-items-center gy-5 gy-lg-0">
+            <div class="col-lg-6 text-center text-lg-start">
+              <h6 class="h2 text-primary fw-bold mb-1">Ready to Get Started?</h6>
+              <p class="fw-medium mb-4">Start managing your projects with a 7-day free trial</p>
+              <a href="https://app.toyiyo.com/Account/RegisterCompanyAdmin" class="btn btn-primary"
+                >Get Started<i class="mdi mdi-arrow-right mdi-24px ms-3 scaleX-n1-rtl"></i
+              ></a>
+            </div>
+            <div class="col-lg-6 pt-lg-5">
+              <img
+                src="assets/img/front-pages/landing-page/cta-dashboard-toyiyo.png"
+                alt="cta dashboard"
+                class="img-fluid" />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- CTA: End -->
+
+      <!-- Contact Us: Start -->
+      <!-- <section id="landingContact" class="section-py bg-body landing-contact">
+        <div class="container bg-icon-left position-relative">
+          <img
+            src="assets/img/front-pages/icons/bg-left-icon-light.png"
+            alt="section icon"
+            class="position-absolute top-0 start-0"
+            data-speed="1"
+            data-app-light-img="front-pages/icons/bg-left-icon-light.png"
+            data-app-dark-img="front-pages/icons/bg-left-icon-dark.png" />
+          <h6 class="text-center fw-semibold d-flex justify-content-center align-items-center mb-4">
+            <img
+              src="assets/img/front-pages/icons/section-tilte-icon.png"
+              alt="section title icon"
+              class="me-2" />
+            <span class="text-uppercase">contact us</span>
+          </h6>
+          <h3 class="text-center mb-2"><span class="fw-bold">Lets work</span> together</h3>
+          <p class="text-center fw-medium mb-3 mb-md-5 pb-3">Any question or remark? just write us a message</p>
+          <div class="row gy-4">
+            <div class="col-lg-5">
+              <div class="card h-100">
+                <div class="bg-primary rounded text-white card-body">
+                  <p class="fw-medium mb-1">Let’s contact with us</p>
+                  <p class="display-6 mb-4">Share your ideas or requirement with our experts.</p>
+                  <img
+                    src="assets/img/front-pages/landing-page/let’s-contact.png
+              "
+                    alt="let’s contact"
+                    class="w-100 mb-2 pb-1" />
+                  <p class="mb-0">
+                    Looking for more customisation, more features, and more anything? Don’t worry, We’ve provide you
+                    with an entire team of experienced professionals.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="mb-4">Share your ideas</h5>
+                  <form>
+                    <div class="row g-3">
+                      <div class="col-md-6">
+                        <div class="form-floating form-floating-outline">
+                          <input type="text" class="form-control" id="basic-default-fullname" placeholder="John Doe" />
+                          <label for="basic-default-fullname">Full name</label>
+                        </div>
+                      </div>
+
+                      <div class="col-md-6">
+                        <div class="form-floating form-floating-outline">
+                          <input
+                            type="email"
+                            class="form-control"
+                            id="basic-default-email"
+                            placeholder="johndoe99@gmail.com" />
+                          <label for="basic-default-email">Email address</label>
+                        </div>
+                      </div>
+
+                      <div class="col-12">
+                        <div class="form-floating form-floating-outline">
+                          <textarea
+                            class="form-control h-px-200"
+                            placeholder="Message"
+                            aria-label="Message"
+                            id="basic-default-message"></textarea>
+                          <label for="basic-default-message">Message</label>
+                        </div>
+                      </div>
+                    </div>
+                    <button type="submit" class="btn btn-primary mt-3">Send inquiry</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <!-- Contact Us: End -->
+    </div>
+
+    <!-- / Sections:End -->
+
+    <!-- Footer: Start -->
+    <footer class="landing-footer">
+      <div class="footer-top position-relative overflow-hidden">
+        <img
+          src="assets/img/front-pages/backgrounds/footer-bg.png"
+          alt="footer bg"
+          class="footer-bg banner-bg-img" />
+        <div class="container position-relative">
+          <div class="row gx-0 gy-4 g-md-5">
+            <div class="col-lg-5">
+              <a href="#" class="app-brand-link mb-4">
+                <span class="app-brand-logo demo me-2">
+                  <span style="color: #666cff">
+                    <img src="assets/img/branding/logo.png" alt="Logo" />
+                  </span>
+                </span>
+                <span class="app-brand-text demo footer-link fw-bold">Toyiyo</span>
+              </a>
+              <p class="footer-text footer-logo-description mb-4">
+                🚀 Efficient Project Tracking for Small Businesses and Teams
+
+                Manage unlimited projects with ease. <br/>
+                Filter jobs by status to focus on what matters.<br/>
+                Set due dates to stay on top of your work.
+
+              </p>
+              <!-- <form>
+                <div class="d-flex mt-2 gap-3">
+                  <div class="form-floating form-floating-outline w-px-250">
+                    <input
+                      type="text"
+                      class="form-control bg-transparent text-white"
+                      id="newsletter-1"
+                      placeholder="Your email" />
+                    <label for="newsletter-1">Subscribe to newsletter</label>
+                  </div>
+                  <button type="submit" class="btn btn-primary">Subscribe</button>
+                </div>
+              </form> -->
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6">
+              <!-- <h6 class="footer-title mb-4">Demos</h6>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-3">
+                  <a href="../vertical-menu-template/" target="_blank" class="footer-link">Vertical Layout</a>
                 </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i> <a href="#">About us</a>
+                <li class="mb-3">
+                  <a href="../horizontal-menu-template/" target="_blank" class="footer-link">Horizontal Layout</a>
                 </li>
-                <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="https://app.toyiyo.com/legal/terms"
-                    >Terms of service</a
+                <li class="mb-3">
+                  <a href="../vertical-menu-template-bordered/" target="_blank" class="footer-link">Bordered Layout</a>
+                </li>
+                <li class="mb-3">
+                  <a href="../vertical-menu-template-semi-dark/" target="_blank" class="footer-link"
+                    >Semi Dark Layout</a
                   >
                 </li>
                 <li>
-                  <i class="bx bx-chevron-right"></i>
-                  <a href="https://app.toyiyo.com/legal/privacy"
-                    >Privacy policy</a
+                  <a href="../vertical-menu-template-dark/" target="_blank" class="footer-link">Dark Layout</a>
+                </li>
+              </ul> -->
+            </div>
+            <div class="col-lg-2 col-md-4 col-sm-6">
+              <h6 class="footer-title mb-4">Links</h6>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-3">
+                  <a href="https://app.toyiyo.com/legal/terms" class="footer-link">Terms of Service</a>
+                </li>
+                <li class="mb-3">
+                  <a href="https://app.toyiyo.com/legal/privacy" class="footer-link">Privacy Policy<span class="badge rounded-pill bg-primary ms-2">New</span></a
+                  >
+                </li>
+                <!-- <li class="mb-3">
+                  <a href="checkout-page.html" class="footer-link">Checkout</a>
+                </li>
+                <li class="mb-3">
+                  <a href="help-center-landing.html" class="footer-link">Help Center</a>
+                </li> -->
+                <li>
+                  <a href="https://app.toyiyo.com/Account/Login" target="_blank" class="footer-link"
+                    >Login/Register</a
                   >
                 </li>
               </ul>
             </div>
-            <!--
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div> -->
-
-            <!--<div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-
-          </div> -->
+            <div class="col-lg-3 col-md-4">
+              <!-- <h6 class="footer-title mb-4">Download our app</h6>
+              <a href="javascript:void(0);" class="d-block footer-link mb-3 pb-2"
+                ><img src="assets/img/front-pages/landing-page/apple-icon.png" alt="apple icon"
+              /></a>
+              <a href="javascript:void(0);" class="d-block footer-link"
+                ><img src="assets/img/front-pages/landing-page/google-play-icon.png" alt="google play icon"
+              /></a> -->
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="container">
-        <div class="copyright">
-          &copy; Copyright <strong><span>Toyiyo</span></strong
-          >. All Rights Reserved
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/scaffold-bootstrap-metro-style-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-          <a
-            href="https://www.flaticon.com/free-icons/track"
-            title="track icons"
-            >Track icons created by Freepik - Flaticon</a
-          >
-          <a
-            href="https://www.flaticon.com/free-icons/sign-up"
-            title="sign up icons"
-            >Sign up icons created by Freepik - Flaticon</a
-          >
-          <a
-            href="https://www.flaticon.com/free-icons/organize"
-            title="organize icons"
-            >Organize icons created by Eucalyp - Flaticon</a
-          >
-          <a
-            href="https://www.flaticon.com/free-icons/focus"
-            title="focus icons"
-            >Focus icons created by Freepik - Flaticon</a
-          >
+      <div class="footer-bottom py-3">
+        <div
+          class="container d-flex flex-wrap justify-content-between flex-md-row flex-column text-center text-md-start">
+          <div class="mb-2 mb-md-0">
+            <span class="footer-text"
+              >©
+              <script>
+                document.write(new Date().getFullYear());
+              </script>
+              , Made with <i class="tf-icons mdi mdi-heart text-danger"></i> by
+            </span>
+            <a href="https://app.toyiyo.com" target="_blank" class="footer-link fw-medium footer-theme-link"
+              >Toyiyo</a
+            >
+          </div>
+          <div>
+            <!-- <a href="https://github.com/pixinvent" class="footer-link me-2" target="_blank"
+              ><i class="mdi mdi-github"></i
+            ></a>
+            <a href="https://www.facebook.com/pixinvents/" class="footer-link me-2" target="_blank"
+              ><i class="mdi mdi-facebook"></i
+            ></a>
+            <a href="https://twitter.com/pixinvents" class="footer-link me-2" target="_blank"
+              ><i class="mdi mdi-twitter"></i
+            ></a>
+            <a href="https://www.instagram.com/pixinvents/" class="footer-link" target="_blank"
+              ><i class="mdi mdi-instagram"></i
+            ></a> -->
+          </div>
         </div>
       </div>
     </footer>
-    <!-- End Footer -->
+    <!-- Footer: End -->
 
-    <a
-      href="#"
-      class="back-to-top d-flex align-items-center justify-content-center"
-      ><i class="bi bi-arrow-up-short"></i
-    ></a>
+    <!-- Core JS -->
+    <!-- build:js assets/vendor/js/core.js -->
+    <script src="assets/vendor/libs/popper/popper.js"></script>
+    <script src="assets/vendor/js/bootstrap.js"></script>
+    <script src="assets/vendor/libs/node-waves/node-waves.js"></script>
 
-    <!-- Vendor JS Files -->
-    <script src="assets/vendor/aos/aos.js"></script>
-    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-    <script src="assets/vendor/php-email-form/validate.js"></script>
-    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
-    <!-- datadog -->
-    <script>
-      (function (h, o, u, n, d) {
-        h = h[d] = h[d] || {
-          q: [],
-          onReady: function (c) {
-            h.q.push(c);
-          },
-        };
-        d = o.createElement(u);
-        d.async = 1;
-        d.src = n;
-        n = o.getElementsByTagName(u)[0];
-        n.parentNode.insertBefore(d, n);
-      })(
-        window,
-        document,
-        "script",
-        "https://www.datadoghq-browser-agent.com/datadog-rum-v4.js",
-        "DD_RUM"
-      );
-      DD_RUM.onReady(function () {
-        DD_RUM.init({
-          clientToken: "pubf6c9e0dc8399037e7a3837535329c2d7",
-          applicationId: "dca15f0c-d7d4-42af-b2a2-92c6cc8d997a",
-          site: "datadoghq.com",
-          service: "toyiyolanding",
-          env: "prod",
-          // Specify a version number to identify the deployed version of your application in Datadog
-          // version: '1.0.0',
-          sampleRate: 100,
-          sessionReplaySampleRate: 20,
-          trackInteractions: true,
-          trackResources: true,
-          trackLongTasks: true,
-          defaultPrivacyLevel: "mask-user-input",
-        });
+    <!-- endbuild -->
 
-        DD_RUM.startSessionReplayRecording();
-      });
-    </script>
+    <!-- Vendors JS -->
+    <script src="assets/vendor/libs/nouislider/nouislider.js"></script>
+    <script src="assets/vendor/libs/swiper/swiper.js"></script>
 
-    <!-- Template Main JS File -->
-    <script src="assets/js/main.js"></script>
+    <!-- Main JS -->
+    <script src="assets/js/front-main.js"></script>
+
+    <!-- Page JS -->
+    <script src="assets/js/front-page-landing.js"></script>
   </body>
 </html>
